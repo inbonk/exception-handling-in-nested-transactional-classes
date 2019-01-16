@@ -11,8 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class TransactionalInnerService {
+    private final PostRepository postRepository;
+
     @Autowired
-    private PostRepository postRepository;
+    public TransactionalInnerService(PostRepository postRepository) {
+        this.postRepository = postRepository;
+    }
 
     public void innerMethodThrowingRuntimeEx() {
         postRepository.save(new Post("[Transactional class] innerMethodThrowingRuntimeEx"));

@@ -9,10 +9,14 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class OuterService {
+    private final TransactionalInnerService transactionalInnerService;
+    private final InnerService innerService;
+
     @Autowired
-    private TransactionalInnerService transactionalInnerService;
-    @Autowired
-    private InnerService innerService;
+    public OuterService(TransactionalInnerService transactionalInnerService, InnerService innerService) {
+        this.transactionalInnerService = transactionalInnerService;
+        this.innerService = innerService;
+    }
 
     public void callingTransactionalMethodThrowingRuntimeEx() {
         try {

@@ -9,8 +9,12 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class InnerService {
+    private final PostRepository postRepository;
+
     @Autowired
-    private PostRepository postRepository;
+    public InnerService(PostRepository postRepository) {
+        this.postRepository = postRepository;
+    }
 
     public void innerMethodThrowingRuntimeEx() {
         postRepository.save(new Post("[non Transactional class] innerMethodThrowingRuntimeEx"));

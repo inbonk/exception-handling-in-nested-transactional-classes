@@ -9,13 +9,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class OuterService {
-    private final TransactionalInnerService transactionalInnerService;
     private final InnerService innerService;
+    private final TransactionalInnerService transactionalInnerService;
+    private final NestedTransactionalInnerService nestedTransactionalInnerService;
 
     @Autowired
-    public OuterService(TransactionalInnerService transactionalInnerService, InnerService innerService) {
-        this.transactionalInnerService = transactionalInnerService;
+    public OuterService(InnerService innerService, TransactionalInnerService transactionalInnerService, NestedTransactionalInnerService nestedTransactionalInnerService) {
         this.innerService = innerService;
+        this.transactionalInnerService = transactionalInnerService;
+        this.nestedTransactionalInnerService = nestedTransactionalInnerService;
     }
 
     public void callingTransactionalMethodThrowingRuntimeEx() {
@@ -29,6 +31,14 @@ public class OuterService {
     public void callingTransactionalMethodCatchingRuntimeExInside() {
         try {
             transactionalInnerService.innerMethodCatchingRuntimeEx();
+        } catch (RuntimeException ex) {
+            log.warn("OuterService caught exception at outer. ex:{}", ex.getMessage());
+        }
+    }
+
+    public void callingNestedTransactionalMethodThrowingRuntimeEx() {
+        try {
+            nestedTransactionalInnerService.innerMethodThrowingRuntimeEx();
         } catch (RuntimeException ex) {
             log.warn("OuterService caught exception at outer. ex:{}", ex.getMessage());
         }

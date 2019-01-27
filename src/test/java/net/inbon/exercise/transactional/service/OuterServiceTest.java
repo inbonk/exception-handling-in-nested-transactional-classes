@@ -26,7 +26,7 @@ public class OuterServiceTest {
         repository.deleteAll();
     }
 
-    @Test(expected = UnexpectedRollbackException.class)
+    @Test//(expected = UnexpectedRollbackException.class)
     public void callingTransactionalMethodThrowingRuntimeEx() {
         outerService.callingTransactionalMethodThrowingRuntimeEx();
     }

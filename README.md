@@ -2,13 +2,10 @@
 
 This application is an example for showing how exception handling works in Spring transaction manager.
 
-#### launch mysql with docker
+#### launch mysql with docker and create a test schema
 ```bash
 docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -d --rm mysql:5 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
-```
-
-#### create a test database
-```bash
+sleep 20
 docker exec -i -t mysql mysql -p1234 -e 'create database exercise'
 ```
 

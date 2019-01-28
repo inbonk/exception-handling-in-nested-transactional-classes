@@ -1,0 +1,524 @@
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.2.RELEASE)
+
+2019-01-28 21:39:39.915  INFO 2041 --- [           main] n.i.e.t.TransactionalApplication         : Starting TransactionalApplication on woowaIBK.local with PID 2041 (/Users/inbonk/dev/exception-handling-in-nested-transactional-classes/build/classes/java/main started by inbonk in /Users/inbonk/dev/exception-handling-in-nested-transactional-classes)
+2019-01-28 21:39:39.918  INFO 2041 --- [           main] n.i.e.t.TransactionalApplication         : No active profile set, falling back to default profiles: default
+2019-01-28 21:39:40.348  INFO 2041 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-01-28 21:39:40.409  INFO 2041 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 1 repository interfaces.
+2019-01-28 21:39:40.679 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@659e0bfd
+2019-01-28 21:39:40.780 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2019-01-28 21:39:40.783 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : driverClassName................."com.mysql.cj.jdbc.Driver"
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:mysql://localhost:3306/exercise?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2019-01-28 21:39:40.784 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2019-01-28 21:39:40.785 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2019-01-28 21:39:40.786 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2019-01-28 21:39:40.786 DEBUG 2041 --- [           main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2019-01-28 21:39:40.786  INFO 2041 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-01-28 21:39:41.012 DEBUG 2041 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bb9efbc
+2019-01-28 21:39:41.014  INFO 2041 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-01-28 21:39:41.047 DEBUG 2041 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-28 21:39:41.063 DEBUG 2041 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: sun.misc.Launcher$AppClassLoader@659e0bfd
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (HikariPool-1)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/Users/inbonk/dev/exception-handling-in-nested-transactional-classes/build/classes/java/main/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		net.inbon.exercise.transactional.entity.Post]
+	Mapping files names []
+	Properties []
+2019-01-28 21:39:41.074 DEBUG 2041 --- [           main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2019-01-28 21:39:41.077 DEBUG 2041 --- [           main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2019-01-28 21:39:41.080 DEBUG 2041 --- [           main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2019-01-28 21:39:41.117  INFO 2041 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-01-28 21:39:41.118  INFO 2041 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-28 21:39:41.118 DEBUG 2041 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2019-01-28 21:39:41.128 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a894b55
+2019-01-28 21:39:41.137 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bb4416e
+2019-01-28 21:39:41.145 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a354993
+2019-01-28 21:39:41.153 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b9bbe21
+2019-01-28 21:39:41.161 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72ee345f
+2019-01-28 21:39:41.170 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fd5e10b
+2019-01-28 21:39:41.178 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22ed3355
+2019-01-28 21:39:41.187 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65b56489
+2019-01-28 21:39:41.198 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@160990ce
+2019-01-28 21:39:41.198 DEBUG 2041 --- [onnection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2019-01-28 21:39:41.257 DEBUG 2041 --- [           main] o.hibernate.service.spi.ServiceBinding   : Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2019-01-28 21:39:41.273 DEBUG 2041 --- [           main] o.h.c.internal.RegionFactoryInitiator    : Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2019-01-28 21:39:41.273 DEBUG 2041 --- [           main] o.h.c.internal.RegionFactoryInitiator    : Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2019-01-28 21:39:41.290  INFO 2041 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-01-28 21:39:41.316 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@4e2916c3
+2019-01-28 21:39:41.316 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@4e2916c3
+2019-01-28 21:39:41.316 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@4e2916c3
+2019-01-28 21:39:41.317 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@60d1b21f
+2019-01-28 21:39:41.317 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@621f89b8
+2019-01-28 21:39:41.318 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@4dafba3e
+2019-01-28 21:39:41.318 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@3d43fe
+2019-01-28 21:39:41.318 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@3d43fe
+2019-01-28 21:39:41.318 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@3d43fe
+2019-01-28 21:39:41.319 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@476a736d
+2019-01-28 21:39:41.319 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@476a736d
+2019-01-28 21:39:41.319 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@476a736d
+2019-01-28 21:39:41.320 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@3db64bd4
+2019-01-28 21:39:41.320 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@3db64bd4
+2019-01-28 21:39:41.320 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3db64bd4
+2019-01-28 21:39:41.321 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@37c2eacb
+2019-01-28 21:39:41.321 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@37c2eacb
+2019-01-28 21:39:41.321 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@37c2eacb
+2019-01-28 21:39:41.322 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@15bc339
+2019-01-28 21:39:41.322 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@15bc339
+2019-01-28 21:39:41.322 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@15bc339
+2019-01-28 21:39:41.323 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@73044cdf
+2019-01-28 21:39:41.323 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@73044cdf
+2019-01-28 21:39:41.323 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@73044cdf
+2019-01-28 21:39:41.324 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@2301b75
+2019-01-28 21:39:41.324 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@2301b75
+2019-01-28 21:39:41.324 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2301b75
+2019-01-28 21:39:41.325 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@6a84bc3f
+2019-01-28 21:39:41.325 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@6a84bc3f
+2019-01-28 21:39:41.326 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@705f83a7
+2019-01-28 21:39:41.326 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@705f83a7
+2019-01-28 21:39:41.327 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@57b75756
+2019-01-28 21:39:41.327 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@57b75756
+2019-01-28 21:39:41.327 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@287f7811
+2019-01-28 21:39:41.328 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@44cb460e
+2019-01-28 21:39:41.329 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@1f52eb6f
+2019-01-28 21:39:41.329 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@1f52eb6f
+2019-01-28 21:39:41.330 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.DurationType@3fa76c61
+2019-01-28 21:39:41.330 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.DurationType@3fa76c61
+2019-01-28 21:39:41.331 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Instant -> org.hibernate.type.InstantType@7baf6acf
+2019-01-28 21:39:41.332 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.InstantType@7baf6acf
+2019-01-28 21:39:41.333 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@377008df
+2019-01-28 21:39:41.333 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@377008df
+2019-01-28 21:39:41.334 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.LocalDateType@153d4abb
+2019-01-28 21:39:41.334 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@153d4abb
+2019-01-28 21:39:41.335 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@27b000f7
+2019-01-28 21:39:41.336 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@27b000f7
+2019-01-28 21:39:41.336 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@29c2c826
+2019-01-28 21:39:41.336 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@29c2c826
+2019-01-28 21:39:41.337 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@1f193686
+2019-01-28 21:39:41.337 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@1f193686
+2019-01-28 21:39:41.340 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@78830d9a
+2019-01-28 21:39:41.340 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@78830d9a
+2019-01-28 21:39:41.341 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@7ad54c55
+2019-01-28 21:39:41.341 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@7ad54c55
+2019-01-28 21:39:41.341 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@6293e39e
+2019-01-28 21:39:41.342 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6293e39e
+2019-01-28 21:39:41.342 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@3daa82be
+2019-01-28 21:39:41.343 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@3daa82be
+2019-01-28 21:39:41.343 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@3daa82be
+2019-01-28 21:39:41.343 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@67e28be3
+2019-01-28 21:39:41.344 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@4f8b4bd0
+2019-01-28 21:39:41.344 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@4f8b4bd0
+2019-01-28 21:39:41.344 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@4f8b4bd0
+2019-01-28 21:39:41.345 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@4cbf4f53
+2019-01-28 21:39:41.346 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@58a120b0
+2019-01-28 21:39:41.346 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@58a120b0
+2019-01-28 21:39:41.347 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@54aca26f
+2019-01-28 21:39:41.347 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@54aca26f
+2019-01-28 21:39:41.348 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@3eee3e2b
+2019-01-28 21:39:41.348 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3eee3e2b
+2019-01-28 21:39:41.348 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@1237e0be
+2019-01-28 21:39:41.348 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1237e0be
+2019-01-28 21:39:41.349 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1d96d872
+2019-01-28 21:39:41.349 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1d96d872
+2019-01-28 21:39:41.349 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@834831b
+2019-01-28 21:39:41.350 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@6a0659ac
+2019-01-28 21:39:41.350 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@6a0659ac
+2019-01-28 21:39:41.350 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@6a0659ac
+2019-01-28 21:39:41.351 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@46866946
+2019-01-28 21:39:41.351 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@46866946
+2019-01-28 21:39:41.351 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@46866946
+2019-01-28 21:39:41.352 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@42b21d99
+2019-01-28 21:39:41.352 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@5177e388
+2019-01-28 21:39:41.353 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@3162743f
+2019-01-28 21:39:41.353 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@3162743f
+2019-01-28 21:39:41.353 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@3162743f
+2019-01-28 21:39:41.354 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@66e8997c
+2019-01-28 21:39:41.354 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@66e8997c
+2019-01-28 21:39:41.354 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@66e8997c
+2019-01-28 21:39:41.354 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@47547132
+2019-01-28 21:39:41.354 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@3a2b2322
+2019-01-28 21:39:41.355 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@63fdffcd
+2019-01-28 21:39:41.355 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@63fdffcd
+2019-01-28 21:39:41.356 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4a68135e
+2019-01-28 21:39:41.356 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@6e57b5e9
+2019-01-28 21:39:41.357 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@6e57b5e9
+2019-01-28 21:39:41.357 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@1549bba7
+2019-01-28 21:39:41.358 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@1549bba7
+2019-01-28 21:39:41.358 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@16ade133
+2019-01-28 21:39:41.358 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@36dfbdaf
+2019-01-28 21:39:41.359 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@359b650b
+2019-01-28 21:39:41.361 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@6411d3c8
+2019-01-28 21:39:41.361 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@6411d3c8
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@616b241a
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@b8e246c
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@1f387978
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7cb2651f
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@4441d567
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@3e1624c7
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@62b969c4
+2019-01-28 21:39:41.362 DEBUG 2041 --- [           main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@dcc6211
+2019-01-28 21:39:41.372 DEBUG 2041 --- [           main] o.h.boot.internal.BootstrapContextImpl   : Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@408b87aa] into BootstrapContext; was [null]
+2019-01-28 21:39:41.373 DEBUG 2041 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@408b87aa) [was null]
+2019-01-28 21:39:41.373 DEBUG 2041 --- [           main] o.h.boot.internal.BootstrapContextImpl   : Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@6aef4eb8] into BootstrapContext; was [null]
+2019-01-28 21:39:41.373 DEBUG 2041 --- [           main] o.h.boot.internal.BootstrapContextImpl   : Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@76c52298] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@bb9ab64]
+2019-01-28 21:39:41.413 DEBUG 2041 --- [           main] o.h.boot.internal.BootstrapContextImpl   : Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@408b87aa]
+2019-01-28 21:39:41.414 DEBUG 2041 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@408b87aa]
+2019-01-28 21:39:41.422 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2019-01-28 21:39:41.422 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2019-01-28 21:39:41.422 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2019-01-28 21:39:41.422 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2019-01-28 21:39:41.423 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2019-01-28 21:39:41.423 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2019-01-28 21:39:41.423 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2019-01-28 21:39:41.424 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2019-01-28 21:39:41.425 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2019-01-28 21:39:41.425 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2019-01-28 21:39:41.425 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2019-01-28 21:39:41.426 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2019-01-28 21:39:41.426 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2019-01-28 21:39:41.426 DEBUG 2041 --- [           main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2019-01-28 21:39:41.432 DEBUG 2041 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Database ->
+       name : MySQL
+    version : 5.7.23
+      major : 5
+      minor : 7
+2019-01-28 21:39:41.432 DEBUG 2041 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6)
+      major : 8
+      minor : 0
+2019-01-28 21:39:41.432 DEBUG 2041 --- [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : JDBC version : 4.2
+2019-01-28 21:39:41.442  INFO 2041 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-01-28 21:39:41.473 DEBUG 2041 --- [           main] o.h.e.j.env.spi.IdentifierHelperBuilder  : JDBC driver metadata reported database stores quoted identifiers in more than one case
+2019-01-28 21:39:41.475 DEBUG 2041 --- [           main] o.h.e.j.env.spi.IdentifierHelperBuilder  : IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2019-01-28 21:39:41.484 DEBUG 2041 --- [           main] o.h.boot.model.relational.Namespace      : Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2019-01-28 21:39:41.486 DEBUG 2041 --- [           main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3fc05ea2] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@7c891ba7]
+2019-01-28 21:39:41.521 DEBUG 2041 --- [           main] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: net.inbon.exercise.transactional.entity.Post
+2019-01-28 21:39:41.546 DEBUG 2041 --- [           main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2019-01-28 21:39:41.549 DEBUG 2041 --- [           main] o.h.cfg.annotations.EntityBinder         : Import with entity name Post
+2019-01-28 21:39:41.553 DEBUG 2041 --- [           main] o.h.cfg.annotations.EntityBinder         : Bind entity net.inbon.exercise.transactional.entity.Post on table post
+2019-01-28 21:39:41.568 DEBUG 2041 --- [           main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(post), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2019-01-28 21:39:41.570 DEBUG 2041 --- [           main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property id with lazy=false
+2019-01-28 21:39:41.572 DEBUG 2041 --- [           main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [net.inbon.exercise.transactional.entity.Post:id]
+2019-01-28 21:39:41.573 DEBUG 2041 --- [           main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for id
+2019-01-28 21:39:41.575 DEBUG 2041 --- [           main] o.h.cfg.annotations.PropertyBinder       : Building property id
+2019-01-28 21:39:41.576 DEBUG 2041 --- [           main] org.hibernate.cfg.BinderHelper           : #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2019-01-28 21:39:41.577 DEBUG 2041 --- [           main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(post), mappingColumn=title, insertable=true, updatable=true, unique=false}
+2019-01-28 21:39:41.577 DEBUG 2041 --- [           main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property title with lazy=false
+2019-01-28 21:39:41.577 DEBUG 2041 --- [           main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [net.inbon.exercise.transactional.entity.Post:title]
+2019-01-28 21:39:41.577 DEBUG 2041 --- [           main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for title
+2019-01-28 21:39:41.577 DEBUG 2041 --- [           main] o.h.cfg.annotations.PropertyBinder       : Building property title
+2019-01-28 21:39:41.578 DEBUG 2041 --- [           main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for id
+2019-01-28 21:39:41.578 DEBUG 2041 --- [           main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for title
+2019-01-28 21:39:41.579 DEBUG 2041 --- [           main] org.hibernate.mapping.PrimaryKey         : Forcing column [id] to be non-null as it is part of the primary key for table [post]
+2019-01-28 21:39:41.598 DEBUG 2041 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Building session factory
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : SessionFactory name : null
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Automatic flush during beforeCompletion(): enabled
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Automatic session close at end of transaction: disabled
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Statistics: disabled
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Deleted entity synthetic identifier rollback: disabled
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Default entity-mode: pojo
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2019-01-28 21:39:41.599 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Allow initialization of lazy state outside session : disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Using BatchFetchStyle : LEGACY
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Default batch fetch size: -1
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Maximum outer join fetch depth: 2
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Default null ordering: NONE
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Order SQL updates by primary key: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Order SQL inserts for batching: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : multi-tenancy strategy : NONE
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JTA Track by Thread: enabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Query language substitutions: {}
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Named query checking : enabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Second-level cache: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Second-level query cache: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Second-level query cache factory: null
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Second-level cache region prefix: null
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Optimize second-level cache for minimal puts: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Structured second-level cache entries: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Second-level cache direct-reference entries: disabled
+2019-01-28 21:39:41.600 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Automatic eviction of collection cache: disabled
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JDBC batch size: 15
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JDBC batch updates for versioned data: enabled
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Scrollable result sets: enabled
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Wrap result sets: disabled
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JDBC3 getGeneratedKeys(): enabled
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JDBC result set fetch size: null
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Connection release mode: ON_CLOSE
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : Generate SQL with comments: disabled
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JPA compliance - query : 
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JPA compliance - closed-handling : 
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JPA compliance - lists : 
+2019-01-28 21:39:41.601 DEBUG 2041 --- [           main] org.hibernate.cfg.Settings               : JPA compliance - transactions : 
+2019-01-28 21:39:41.641 DEBUG 2041 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Session factory constructed with filter configurations : {}
+2019-01-28 21:39:41.641 DEBUG 2041 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Instantiating session factory with properties: {gopherProxySet=false, hibernate.format_sql=true, awt.toolkit=sun.lwawt.macosx.LWCToolkit, hibernate.id.new_generator_mappings=true, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@a098d76, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=/Users/inbonk/dev/exception-handling-in-nested-transactional-classes/build/classes/java/main:/Users/inbonk/dev/exception-handling-in-nested-transactional-classes/build/resources/main:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/2.1.2.RELEASE/43691a5ea941621098078a86fffaba97481a30ff/spring-boot-starter-data-jpa-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.4.197/bb391050048ca8ae3e32451b5a3714ecd3596a46/h2-1.4.197.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/8.0.13/28015319e44ff50a8fee655e725fefc4990abeb1/mysql-connector-java-8.0.13.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/2.1.2.RELEASE/d4266d045585b54b0cef23bc725af66793d96c4c/spring-boot-starter-aop-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/2.1.2.RELEASE/7ab23ed460150c83dac09769dd6467b0ac5ee467/spring-boot-starter-jdbc-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/javax.transaction/javax.transaction-api/1.3/e006adf5cf3cca2181d16bd640ecb80148ec0fce/javax.transaction-api-1.3.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/8531ad5ac454cc2deb9d4d32c40c4d7451939b5d/jaxb-api-2.3.1.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.3.7.Final/f87c5c1bbfc638309824140e68dfaaeb1bb479f3/hibernate-core-5.3.7.Final.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/2.1.4.RELEASE/aedc52b1f5acdfe11cb665d0ad3920de8bca480a/spring-data-jpa-2.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aspects/5.1.4.RELEASE/8d9f441975c7b45f497706c068c022163591d116/spring-aspects-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/2.1.2.RELEASE/d2d5f6e546980503ca79e4a2e9f4e31c47c3e32f/spring-boot-starter-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/2.1.2.RELEASE/5f90ffc7937a051b38fb8322289e3d92831829bf/spring-boot-autoconfigure-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/2.1.2.RELEASE/ea72e00516adf1a97f0e4b023ad55e79686cefac/spring-boot-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/5.1.4.RELEASE/2be9e8da66d32fb4eaf29a46bdcdbfe155f1f87a/spring-context-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.4.RELEASE/57a8c4ab2ff3233095da24c58c30aa75a7a82069/spring-aop-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.2/d2502817521477faf0712c49a6ee2a5388787fc7/aspectjweaver-1.9.2.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/com.zaxxer/HikariCP/3.2.0/6c66db1c636ee90beb4c65fe34abd8ba9396bca6/HikariCP-3.2.0.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/5.1.4.RELEASE/4724d782a976fb7b0f69dd1e5d027a0d68622260/spring-orm-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/5.1.4.RELEASE/ec21d6c0956b523ed364fa1bb1165009ad426753/spring-jdbc-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/85262acf3ca9816f9537ca47d5adeabaead7cb16/javax.activation-api-1.2.0.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.0.4.Final/965a18fdf939ee75e41f7918532d37b3a8350535/hibernate-commons-annotations-5.0.4.Final.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.2.Final/3789d00e859632e6c6206adc0c71625559e6e3b0/jboss-logging-3.3.2.Final.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/javax.persistence/javax.persistence-api/2.2/25665ac8c0b62f50e6488173233239120fc52c96/javax.persistence-api-2.2.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.23.1-GA/c072c13dcb7f705471c40bafb1536171df850ab2/javassist-3.23.1-GA.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.9.7/8fea78fea6449e1738b675cb155ce8422661e237/byte-buddy-1.9.7.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.jboss/jandex/2.0.5.Final/7060f67764565b9ee9d467e3ed0cb8a9c601b23a/jandex-2.0.5.Final.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.4.0/291658ac2ce2476256c7115943652c0accb5c857/classmate-1.4.0.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.dom4j/dom4j/2.1.1/3dce5dbb3571aa820c677fadd8349bfa8f00c199/dom4j-2.1.1.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/2.1.4.RELEASE/144d71cfb0cc330fead0a00969e2ba871a83904b/spring-data-commons-2.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/5.1.4.RELEASE/a671702999fd8b5f1798cd3a7dfbbbf5a4705494/spring-tx-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/5.1.4.RELEASE/507c9391e0b786704929453e7fd3a74cfba46534/spring-beans-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/5.1.4.RELEASE/1abbfd04a7d472811582bb3780ea4d871442d49c/spring-expression-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.4.RELEASE/e7d2ad03a50ebff117a6efe2e0e3f15946d0768a/spring-core-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.1.2.RELEASE/4179271aa0ef84f0329a674f6fc83cebc75caea8/spring-boot-starter-logging-2.1.2.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.3/7c4f3c474fb2c041d8028740440937705ebb473a/logback-classic-1.2.3.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-to-slf4j/2.11.1/1097acadf76aa4dd721ec5807566003ae9d975de/log4j-to-slf4j-2.11.1.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.25/af5364cd6679bfffb114f0dec8a157aaa283b76/jul-to-slf4j-1.7.25.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.3.2/934c04d3cfef185a8008e7bf34331b79730a9d43/javax.annotation-api-1.3.2.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.23/ec62d74fe50689c28c0ff5b35d3aebcaa8b5be68/snakeyaml-1.23.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.1.4.RELEASE/f5a25caae583905203959abf35fdd1ab7a8f2c37/spring-jcl-5.1.4.RELEASE.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.2.3/864344400c3d4d92dfeb0a305dc87d953677c03c/logback-core-1.2.3.jar:/Users/inbonk/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.11.1/268f0fe4df3eefe052b57c87ec48517d64fb2a10/log4j-api-2.11.1.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=Asia/Seoul, os.name=Mac OS X, java.vm.specification.version=1.8, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=KR, sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib, sun.java.command=net.inbon.exercise.transactional.TransactionalApplication, hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@40e37b06, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, javax.persistence.sharedCache.mode=UNSPECIFIED, sun.cpu.endian=little, user.home=/Users/inbonk, user.language=ko, java.specification.vendor=Oracle Corporation, java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre, file.separator=/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.awt.headless=true, sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/classes, hibernate.hbm2ddl.auto=create, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.runtime.version=1.8.0_202-ea-b03, user.name=inbonk, path.separator=:, os.version=10.14.3, java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.ejb.persistenceUnitName=default, file.encoding=UTF-8, spring.beaninfo.ignore=true, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=/var/folders/1t/28g7tgrd1n1_pypw9_yq4zyc0000gp/T/, com.zaxxer.hikari.pool_number=1, java.version=1.8.0_202-ea, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=/Users/inbonk/dev/exception-handling-in-nested-transactional-classes, os.arch=x86_64, PID=2041, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.os.patch.level=unknown, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@733aa9d8, java.library.path=/Users/inbonk/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=25.202-b03, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=HikariDataSource (HikariPool-1), sun.io.unicode.encoding=UnicodeBig, java.ext.dirs=/Users/inbonk/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, java.class.version=52.0, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16}
+2019-01-28 21:39:41.649 DEBUG 2041 --- [           main] org.hibernate.secure.spi.JaccIntegrator  : Skipping JACC integration as it was not enabled
+2019-01-28 21:39:41.650 DEBUG 2041 --- [           main] o.hibernate.internal.SessionFactoryImpl  : Instantiated session factory
+2019-01-28 21:39:41.650 DEBUG 2041 --- [           main] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@3fc05ea2] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@4b97c4ad]
+2019-01-28 21:39:41.675 DEBUG 2041 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [net.inbon.exercise.transactional.entity.Post] is safe
+2019-01-28 21:39:41.675 DEBUG 2041 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : net.inbon.exercise.transactional.entity.Post
+2019-01-28 21:39:41.685 DEBUG 2041 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [net.inbon.exercise.transactional.entity.Post] is safe
+2019-01-28 21:39:41.685 DEBUG 2041 --- [           main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : net.inbon.exercise.transactional.entity.Post
+2019-01-28 21:39:41.906 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: net.inbon.exercise.transactional.entity.Post
+2019-01-28 21:39:41.907 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Version select: select id from post where id =?
+2019-01-28 21:39:41.907 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select post_.id, post_.title as title2_0_ from post post_ where post_.id=?
+2019-01-28 21:39:41.907 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into post (title, id) values (?, ?)
+2019-01-28 21:39:41.907 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Update 0: update post set title=? where id=?
+2019-01-28 21:39:41.907 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from post where id=?
+2019-01-28 21:39:41.907 DEBUG 2041 --- [           main] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into post (title) values (?)
+2019-01-28 21:39:41.930 DEBUG 2041 --- [           main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1eff3cfb]
+2019-01-28 21:39:41.931 DEBUG 2041 --- [           main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : title
+2019-01-28 21:39:41.931 DEBUG 2041 --- [           main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2019-01-28 21:39:41.939 DEBUG 2041 --- [           main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2019-01-28 21:39:41.942 DEBUG 2041 --- [           main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=net.inbon.exercise.transactional.entity.Post)
+    - Returns
+       - EntityReturnImpl(entity=net.inbon.exercise.transactional.entity.Post, querySpaceUid=<gen:0>, path=net.inbon.exercise.transactional.entity.Post)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=net.inbon.exercise.transactional.entity.Post)
+          - SQL table alias mapping - post0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2019-01-28 21:39:41.944 DEBUG 2041 --- [           main] o.h.loader.entity.plan.EntityLoader      : Static select for entity net.inbon.exercise.transactional.entity.Post [NONE]: select post0_.id as id1_0_0_, post0_.title as title2_0_0_ from post post0_ where post0_.id=?
+2019-01-28 21:39:41.944 DEBUG 2041 --- [           main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4aa11206]
+2019-01-28 21:39:41.944 DEBUG 2041 --- [           main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : title
+2019-01-28 21:39:41.944 DEBUG 2041 --- [           main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2019-01-28 21:39:41.944 DEBUG 2041 --- [           main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2019-01-28 21:39:41.944 DEBUG 2041 --- [           main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=net.inbon.exercise.transactional.entity.Post)
+    - Returns
+       - EntityReturnImpl(entity=net.inbon.exercise.transactional.entity.Post, querySpaceUid=<gen:0>, path=net.inbon.exercise.transactional.entity.Post)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=net.inbon.exercise.transactional.entity.Post)
+          - SQL table alias mapping - post0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2019-01-28 21:39:41.945 DEBUG 2041 --- [           main] o.h.loader.entity.plan.EntityLoader      : Static select for entity net.inbon.exercise.transactional.entity.Post [READ]: select post0_.id as id1_0_0_, post0_.title as title2_0_0_ from post post0_ where post0_.id=?
+2019-01-28 21:39:41.954 DEBUG 2041 --- [           main] org.hibernate.loader.Loader              : Static select for action ACTION_MERGE on entity net.inbon.exercise.transactional.entity.Post: select post0_.id as id1_0_0_, post0_.title as title2_0_0_ from post post0_ where post0_.id=?
+2019-01-28 21:39:41.955 DEBUG 2041 --- [           main] org.hibernate.loader.Loader              : Static select for action ACTION_REFRESH on entity net.inbon.exercise.transactional.entity.Post: select post0_.id as id1_0_0_, post0_.title as title2_0_0_ from post post0_ where post0_.id=?
+2019-01-28 21:39:41.975 DEBUG 2041 --- [           main] org.hibernate.SQL                        : 
+    
+    drop table if exists post
+Hibernate: 
+    
+    drop table if exists post
+2019-01-28 21:39:41.991 DEBUG 2041 --- [           main] org.hibernate.SQL                        : 
+    
+    create table post (
+       id bigint not null auto_increment,
+        title varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+Hibernate: 
+    
+    create table post (
+       id bigint not null auto_increment,
+        title varchar(255),
+        primary key (id)
+    ) engine=MyISAM
+2019-01-28 21:39:41.998  INFO 2041 --- [           main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1e977098'
+2019-01-28 21:39:41.999 DEBUG 2041 --- [           main] o.h.query.spi.NamedQueryRepository       : Checking 0 named HQL queries
+2019-01-28 21:39:41.999 DEBUG 2041 --- [           main] o.h.query.spi.NamedQueryRepository       : Checking 0 named SQL queries
+2019-01-28 21:39:42.000 DEBUG 2041 --- [           main] o.h.internal.SessionFactoryRegistry      : Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@57ad1178
+2019-01-28 21:39:42.000 DEBUG 2041 --- [           main] o.h.internal.SessionFactoryRegistry      : Registering SessionFactory: 43d3e73a-681c-4a8f-9af7-faf97f0a1695 (<unnamed>)
+2019-01-28 21:39:42.000 DEBUG 2041 --- [           main] o.h.internal.SessionFactoryRegistry      : Not binding SessionFactory to JNDI, no JNDI name configured
+2019-01-28 21:39:42.001  INFO 2041 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 21:39:42.068 DEBUG 2041 --- [           main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2019-01-28 21:39:42.116 DEBUG 2041 --- [           main] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2019-01-28 21:39:42.124 DEBUG 2041 --- [           main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2019-01-28 21:39:42.175 DEBUG 2041 --- [           main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2019-01-28 21:39:42.208 DEBUG 2041 --- [           main] tor$SharedEntityManagerInvocationHandler : Creating new EntityManager for shared EntityManager invocation
+2019-01-28 21:39:42.223 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.TransactionalInnerService.innerMethodThrowingRuntimeEx' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.232 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.TransactionalInnerService.innerMethodCatchingRuntimeEx' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.241 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.NestedTransactionalInnerService.innerMethodThrowingRuntimeEx' with attribute: PROPAGATION_NESTED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.246 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.OuterService.callingTransactionalMethodThrowingRuntimeEx' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.247 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.OuterService.callingTransactionalMethodCatchingRuntimeExInside' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.247 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.OuterService.callingNestedTransactionalMethodThrowingRuntimeEx' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.247 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.OuterService.callingMethodThrowingRuntimeEx' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.248 TRACE 2041 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'net.inbon.exercise.transactional.service.OuterService.callingMethodCatchingRuntimeExInside' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.385  INFO 2041 --- [           main] n.i.e.t.TransactionalApplication         : Started TransactionalApplication in 2.866 seconds (JVM running for 3.219)
+2019-01-28 21:39:42.389 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [net.inbon.exercise.transactional.service.OuterService.callingTransactionalMethodThrowingRuntimeEx]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2019-01-28 21:39:42.389 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1963906615<open>)] for JPA transaction
+2019-01-28 21:39:42.391 DEBUG 2041 --- [           main] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2019-01-28 21:39:42.391 DEBUG 2041 --- [           main] o.h.e.t.internal.TransactionImpl         : begin
+2019-01-28 21:39:42.394 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2b08772d]
+2019-01-28 21:39:42.394 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.jdbc.datasource.ConnectionHolder@78a8978a] for key [HikariDataSource (HikariPool-1)] to thread [main]
+2019-01-28 21:39:42.394 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.orm.jpa.EntityManagerHolder@7d4d8579] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@adcfad9] to thread [main]
+2019-01-28 21:39:42.394 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Initializing transaction synchronization
+2019-01-28 21:39:42.394 TRACE 2041 --- [           main] o.s.t.i.TransactionInterceptor           : Getting transaction for [net.inbon.exercise.transactional.service.OuterService.callingTransactionalMethodThrowingRuntimeEx]
+2019-01-28 21:39:42.403 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@7d4d8579] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@adcfad9] bound to thread [main]
+2019-01-28 21:39:42.403 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1963906615<open>)] for JPA transaction
+2019-01-28 21:39:42.403 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@78a8978a] for key [HikariDataSource (HikariPool-1)] bound to thread [main]
+2019-01-28 21:39:42.403 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2019-01-28 21:39:42.403 TRACE 2041 --- [           main] o.s.t.i.TransactionInterceptor           : Getting transaction for [net.inbon.exercise.transactional.service.TransactionalInnerService.innerMethodThrowingRuntimeEx]
+2019-01-28 21:39:42.410 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Bound value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@412c5e8b] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] to thread [main]
+2019-01-28 21:39:42.411 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@7d4d8579] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@adcfad9] bound to thread [main]
+2019-01-28 21:39:42.411 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1963906615<open>)] for JPA transaction
+2019-01-28 21:39:42.411 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@78a8978a] for key [HikariDataSource (HikariPool-1)] bound to thread [main]
+2019-01-28 21:39:42.411 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2019-01-28 21:39:42.411 TRACE 2041 --- [           main] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2019-01-28 21:39:42.415 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Retrieved value [org.springframework.orm.jpa.EntityManagerHolder@7d4d8579] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@adcfad9] bound to thread [main]
+2019-01-28 21:39:42.424 DEBUG 2041 --- [           main] org.hibernate.engine.spi.ActionQueue     : Executing identity-insert immediately
+2019-01-28 21:39:42.426 DEBUG 2041 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (title) 
+    values
+        (?)
+Hibernate: 
+    insert 
+    into
+        post
+        (title) 
+    values
+        (?)
+2019-01-28 21:39:42.439 TRACE 2041 --- [           main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [[Transactional class] innerMethodThrowingRuntimeEx]
+2019-01-28 21:39:42.446 DEBUG 2041 --- [           main] o.h.id.IdentifierGeneratorHelper         : Natively generated identity: 1
+2019-01-28 21:39:42.446 DEBUG 2041 --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : HHH000387: ResultSet's statement was not registered
+2019-01-28 21:39:42.448 TRACE 2041 --- [           main] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2019-01-28 21:39:42.448 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$DefaultCrudMethodMetadata@412c5e8b] for key [public abstract java.lang.Object org.springframework.data.repository.CrudRepository.save(java.lang.Object)] from thread [main]
+2019-01-28 21:39:42.449 TRACE 2041 --- [           main] o.s.t.i.TransactionInterceptor           : Completing transaction for [net.inbon.exercise.transactional.service.TransactionalInnerService.innerMethodThrowingRuntimeEx] after exception: java.lang.RuntimeException: RuntimeException inside
+2019-01-28 21:39:42.449 TRACE 2041 --- [           main] o.s.t.i.RuleBasedTransactionAttribute    : Applying rules to determine whether transaction should rollback on java.lang.RuntimeException: RuntimeException inside
+2019-01-28 21:39:42.449 TRACE 2041 --- [           main] o.s.t.i.RuleBasedTransactionAttribute    : Winning rollback rule is: null
+2019-01-28 21:39:42.449 TRACE 2041 --- [           main] o.s.t.i.RuleBasedTransactionAttribute    : No relevant rollback rule found: applying default rules
+2019-01-28 21:39:42.449 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Participating transaction failed - marking existing transaction as rollback-only
+2019-01-28 21:39:42.449 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Setting JPA transaction on EntityManager [SessionImpl(1963906615<open>)] rollback-only
+2019-01-28 21:39:42.453 DEBUG 2041 --- [           main] cResourceLocalTransactionCoordinatorImpl : JDBC transaction marked for rollback-only (exception provided for stack trace)
+
+java.lang.Exception: exception just for purpose of providing stack trace
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.markRollbackOnly(JdbcResourceLocalTransactionCoordinatorImpl.java:314) [hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.markRollbackOnly(TransactionImpl.java:200) [hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.setRollbackOnly(TransactionImpl.java:221) [hibernate-core-5.3.7.Final.jar:5.3.7.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager$JpaTransactionObject.setRollbackOnly(JpaTransactionManager.java:682) [spring-orm-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.orm.jpa.JpaTransactionManager.doSetRollbackOnly(JpaTransactionManager.java:581) [spring-orm-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:847) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.rollback(AbstractPlatformTransactionManager.java:812) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.completeTransactionAfterThrowing(TransactionAspectSupport.java:551) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:298) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) [spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at net.inbon.exercise.transactional.service.TransactionalInnerService$$EnhancerBySpringCGLIB$$a3f4993a.innerMethodThrowingRuntimeEx(<generated>) [main/:na]
+	at net.inbon.exercise.transactional.service.OuterService.callingTransactionalMethodThrowingRuntimeEx(OuterService.java:27) [main/:na]
+	at net.inbon.exercise.transactional.service.OuterService$$FastClassBySpringCGLIB$$c15bf0b.invoke(<generated>) [main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) [spring-core-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749) [spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) [spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) [spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) [spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at net.inbon.exercise.transactional.service.OuterService$$EnhancerBySpringCGLIB$$207efef6.callingTransactionalMethodThrowingRuntimeEx(<generated>) ~[main/:na]
+	at net.inbon.exercise.transactional.Runner.run(Runner.java:26) ~[main/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:794) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at net.inbon.exercise.transactional.TransactionalApplication.main(TransactionalApplication.java:9) ~[main/:na]
+
+2019-01-28 21:39:42.453  WARN 2041 --- [           main] n.i.e.t.service.OuterService             : OuterService caught exception at outer. ex:RuntimeException inside
+2019-01-28 21:39:42.453 TRACE 2041 --- [           main] o.s.t.i.TransactionInterceptor           : Completing transaction for [net.inbon.exercise.transactional.service.OuterService.callingTransactionalMethodThrowingRuntimeEx]
+2019-01-28 21:39:42.453 TRACE 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Triggering beforeCommit synchronization
+2019-01-28 21:39:42.453 TRACE 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Triggering beforeCompletion synchronization
+2019-01-28 21:39:42.453 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2019-01-28 21:39:42.453 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1963906615<open>)]
+2019-01-28 21:39:42.453 DEBUG 2041 --- [           main] o.h.e.t.internal.TransactionImpl         : committing
+2019-01-28 21:39:42.453 DEBUG 2041 --- [           main] cResourceLocalTransactionCoordinatorImpl : On commit, transaction was marked for roll-back only, rolling back
+2019-01-28 21:39:42.456 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Clearing transaction synchronization
+2019-01-28 21:39:42.456 TRACE 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Triggering afterCompletion synchronization
+2019-01-28 21:39:42.457 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.orm.jpa.EntityManagerHolder@7d4d8579] for key [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean@adcfad9] from thread [main]
+2019-01-28 21:39:42.457 TRACE 2041 --- [           main] .s.t.s.TransactionSynchronizationManager : Removed value [org.springframework.jdbc.datasource.ConnectionHolder@78a8978a] for key [HikariDataSource (HikariPool-1)] from thread [main]
+2019-01-28 21:39:42.457 DEBUG 2041 --- [           main] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1963906615<open>)] after transaction
+2019-01-28 21:39:42.458  INFO 2041 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-01-28 21:39:42.460 ERROR 2041 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:794) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	at net.inbon.exercise.transactional.TransactionalApplication.main(TransactionalApplication.java:9) [main/:na]
+Caused by: org.springframework.transaction.UnexpectedRollbackException: Transaction silently rolled back because it has been marked as rollback-only
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:755) ~[spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:714) ~[spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:533) ~[spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:304) ~[spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at net.inbon.exercise.transactional.service.OuterService$$EnhancerBySpringCGLIB$$207efef6.callingTransactionalMethodThrowingRuntimeEx(<generated>) ~[main/:na]
+	at net.inbon.exercise.transactional.Runner.run(Runner.java:26) ~[main/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804) [spring-boot-2.1.2.RELEASE.jar:2.1.2.RELEASE]
+	... 5 common frames omitted
+
+2019-01-28 21:39:42.462  INFO 2041 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-01-28 21:39:42.463 DEBUG 2041 --- [           main] o.hibernate.internal.SessionFactoryImpl  : HHH000031: Closing
+2019-01-28 21:39:42.463 DEBUG 2041 --- [           main] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@22da2fe6] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@4b97c4ad]
+2019-01-28 21:39:42.464 DEBUG 2041 --- [           main] o.h.s.i.AbstractServiceRegistryImpl      : Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2019-01-28 21:39:42.465 DEBUG 2041 --- [           main] o.h.b.r.i.BootstrapServiceRegistryImpl   : Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2019-01-28 21:39:42.465  INFO 2041 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-01-28 21:39:42.465 DEBUG 2041 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2019-01-28 21:39:42.466 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@3bb9efbc: (connection evicted)
+2019-01-28 21:39:42.468 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@a894b55: (connection evicted)
+2019-01-28 21:39:42.468 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@4bb4416e: (connection evicted)
+2019-01-28 21:39:42.468 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7a354993: (connection evicted)
+2019-01-28 21:39:42.468 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2b9bbe21: (connection evicted)
+2019-01-28 21:39:42.468 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@72ee345f: (connection evicted)
+2019-01-28 21:39:42.469 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2fd5e10b: (connection evicted)
+2019-01-28 21:39:42.469 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@22ed3355: (connection evicted)
+2019-01-28 21:39:42.469 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@65b56489: (connection evicted)
+2019-01-28 21:39:42.469 DEBUG 2041 --- [nnection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@160990ce: (connection evicted)
+2019-01-28 21:39:42.469 DEBUG 2041 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2019-01-28 21:39:42.469  INFO 2041 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+> Task :bootRun FAILED
+3 actionable tasks: 2 executed, 1 up-to-date
